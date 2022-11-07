@@ -1,4 +1,5 @@
 import TodoList from "../components/todo-list";
+import TodoListSidebar from "../components/todo-list-sidebar";
 
 export default function TodoListPage() {
     const list = [
@@ -19,7 +20,11 @@ export default function TodoListPage() {
     ]; 
 
     return (
-        <TodoList list={list}></TodoList>
+        <div>
+            <TodoListSidebar></TodoListSidebar>
+            <TodoList list={list}></TodoList> 
+        </div>
+        
     );
 }
 
