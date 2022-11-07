@@ -1,9 +1,9 @@
-import TodoList from "./pages/todo-list";
+import TodoListPage from "./pages/todo-list-page";
 
 function App() {
   return (
     <div className="App">
-      <TodoList></TodoList>
+      <TodoListPage></TodoListPage>
     </div>
   );
 }
