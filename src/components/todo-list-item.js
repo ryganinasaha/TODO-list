@@ -3,6 +3,13 @@
 import Button from "@restart/ui/esm/Button";
 
 export default function TodoListItem(props) {
+    // const buttonCloseStyle = {
+    //     display: props.item.status !== "Завершено"? 'display' : 'none',
+    //     color: 'red'
+    // };
+
+    const buttonCloseClass = `${props.item.status === "Завершено" ? 'hide' :  ''}`;
+
     return (
         <tr>
             <td>{props.index}</td>
@@ -14,8 +21,16 @@ export default function TodoListItem(props) {
             <td>{props.item.status}</td>
             <td>
                 <Button onClick={() => props.removeItem(props.index - 1)}>Удалить</Button>
-                <Button onClick={() => props.changeStatus(props.index - 1)}>Завершить</Button>
+                <Button 
+                className={buttonCloseClass}
+                 onClick={() => props.changeStatus(props.index - 1)}
+                >Завершить</Button>
             </td>
          </tr>
     );
 }
+
+//                  { props.item.status !== "Завершено"?
+//                     <Button onClick={() => props.changeStatus(props.index - 1)}>Завершить</Button>:
+//                     null
+//                  }

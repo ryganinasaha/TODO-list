@@ -33,7 +33,7 @@ export default function TodoListPage() {
     }
 
     function changeStatus(index) {
-        list[index].status = "Завершино";
+        list[index].status = "Завершено";
 
         setList([].concat(list));
     }

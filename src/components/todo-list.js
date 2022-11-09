@@ -8,7 +8,7 @@ export default function TodoList(props) {
 
     return (
         <div>
-            <Table striped bordered hover size="sm">
+            <Table striped bordered hover size="sm"  style={{marginTop : '30px', width : '87%', marginLeft : '60px'}}>
                 <thead>
                     <tr>
                         <th>#</th>
