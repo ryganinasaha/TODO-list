@@ -15,3 +15,12 @@ code {
 .hide {
   display: none;
 }
+
+.sidebar {
+  background-color: aquamarine;
+  height: 30px;
+}
+
+a {
+  margin: 20px;
+}
