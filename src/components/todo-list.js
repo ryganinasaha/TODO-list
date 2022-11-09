@@ -8,7 +8,7 @@ export default function TodoList(props) {
 
     return (
         <div>
-            <Table striped bordered hover>
+            <Table striped bordered hover size="sm">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -17,11 +17,13 @@ export default function TodoList(props) {
                         <th>Дата выполнения</th>
                         <th>Теги</th>
                         <th>Приоритет</th>
+                        <th>Статус</th>
+                        <th>Действие</th>
                     </tr>
                 </thead>
                 <tbody>
                     {props.list.map((item, index)=> (
-                        <TodoListItem item={item} index={index +1} key={index}></TodoListItem> 
+                        <TodoListItem item={item} index={index +1} key={index} removeItem={props.removeItem} changeStatus={props.changeStatus}></TodoListItem> 
                     ))}  
                 </tbody>
             </Table>
